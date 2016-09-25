@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inloggen</title>
+    <link rel="stylesheet" type="text/css" href="css/inlogstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <section>
+        <h1>Account aanmaken</h1>
+        <form action="homelijst.html">
+            <fieldset>
+                <legend>Telefoonnummer (optioneel)</legend>
+                <label>Mobiele nummer</label>
+                <input type="tel" placeholder="+31 6 xxxxxxxx" required="required">
+            </fieldset>
+            <fieldset>
+                <legend>Inloggegevens</legend>
+                <label>E-mailadres</label>
+                <input type="email" required="required">
+                <label>E-mailadres bevestigen</label>
+                <input type="email" required="required">
+                <label>Wachtwoord</label>
+                <input type="password" required="required">
+                <label>Wachtwoord bevestigen</label>
+                <input type="password" required="required">
+            </fieldset>
+            <input type="checkbox" name="TnC" value="TermsAndConditions">
+            <p>Ik ga akkoord met de voorwaarden.</p>
+            <button type="reset">Annuleren</button>
+            <button type="submit">Aanmaken</button>
+        </form>
+
+    </section>
+
+</body>
+
+</html>
