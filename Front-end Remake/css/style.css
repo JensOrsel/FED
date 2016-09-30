@@ -1,0 +1,56 @@
+body {
+    font-family: 'Libre Baskerville', serif;
+    line-height: 170%;
+}
+
+header {
+    color: #003082;
+}
+
+header a:visited {
+    color: #003082;
+}
+
+h1 {
+    font-size: 1em;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    font-size: 0.8em;
+}
+
+article {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-width: 15em;
+    -moz-column-width: 15em;
+    column-width: 15em;
+    -webkit-column-gap: 4em;
+    -moz-column-gap: 4em;
+    column-gap: 4em;
+    -webkit-column-rule: 1px dotted #ddd;
+    -moz-column-rule: 1px dotted #ddd;
+    column-rule: 1px dotted #ddd;
+    max-height: 70vh;
+    max-width: 80vw;
+    min-width: 50vw;
+    padding: 0 1em;
+    margin: 15vh 5vh;
+}
+
+footer {
+    margin: 0.5em 0 0 1em;
+    text-align: center;
+    position: fixed;
+    opacity: 0.3;
+    font-size: 0.5em;
+}
+
+p {
+    font-size: 1em;
+}
