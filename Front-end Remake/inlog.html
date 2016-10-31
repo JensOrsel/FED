@@ -11,31 +11,34 @@
 <body>
     <section>
         <h1>Account aanmaken</h1>
-        <form action="homelijst.html">
+        <form name="myForm" action="homelijst.html">
             <fieldset>
                 <legend>Telefoonnummer (optioneel)</legend>
-                <label>Mobiele nummer</label>
-                <input type="tel" placeholder="+31 6 xxxxxxxx" required="required">
+                <label for="number">Mobiele nummer</label>
+                <input id="number" type="tel" placeholder="+31 6 xxxxxxxx" required="required">
+                <p class="feedback">Zorg dat het ingevulde nummer met +31 begint.</p>
             </fieldset>
             <fieldset>
                 <legend>Inloggegevens</legend>
-                <label>E-mailadres</label>
-                <input type="email" required="required">
-                <label>E-mailadres bevestigen</label>
-                <input type="email" required="required">
-                <label>Wachtwoord</label>
-                <input type="password" required="required">
-                <label>Wachtwoord bevestigen</label>
-                <input type="password" required="required">
+                <label for="mailone">E-mailadres</label>
+                <input id="mailone" type="email" required="required">
+                <p class="feedback">Dit emailadres wordt niet geaccepteerd.</p>
+                <label for="mailtwo">E-mailadres bevestigen</label>
+                <input id="mailtwo" type="email" required="required">
+                <p class="feedback">Dit emailadres komt niet overeen.</p>
+                <label for="passone">Wachtwoord</label>
+                <input id="passone" type="password" required="required">
+                <p class="feedback">Uw wachtwoord is niet sterk genoeg.</p>
+                <label for="passtwo">Wachtwoord bevestigen</label>
+                <input id="passtwo" type="password" required="required">
+                <p class="feedback">Dit wachtwoord komt niet overeen.</p>
             </fieldset>
             <input type="checkbox" name="TnC" value="TermsAndConditions">
             <p>Ik ga akkoord met de voorwaarden.</p>
             <button type="reset">Annuleren</button>
             <button type="submit">Aanmaken</button>
         </form>
-
     </section>
-
 </body>
 
 </html>

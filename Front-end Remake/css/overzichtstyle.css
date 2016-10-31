@@ -1,3 +1,82 @@
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    blockquote,
+    pre,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+    }
+    /*EIND RESET*/
+
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         background-color: #e6e6e9;
         font-family: 'Calibri', sans-serif;
@@ -5,47 +84,119 @@
         height: 100vh;
     }
 
-    header.navigatie {
-        text-align: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-size: 1em;
-        background-color: #ffc917;
-        border: 1px dotted blue;
-        box-shadow: 0 .2em 0 rgba(150, 150, 150, .3);
-        width: 20%;
-        padding: .3em;
-        z-index: 2;
-    }
-
-    div header {
-        text-align: center;
-        font-size: 1.5em;
-        align-self: center;
-        flex: 1;
-    }
-
-    section {
-        flex: 2;
-        align-self: center;
-        text-align: center;
-    }
-
-    div.content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    div.headings {
+    main {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    header {
+        box-shadow: 0 2px 0 0 rgba(7, 7, 33, .15);
+        background: white;
+        height: 3em;
+        display: flex;
+    }
+
+    p a {
+        float: left;
+        display: inline-block;
+        color: #0079d3;
+        text-decoration: none;
+        font-size: 1.1em;
+        margin-left: 0.5em;
+    }
+
+    p.opgeslagen {
+        color: #0079d3;
+    }
+
+    section.articles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        margin: auto;
+        margin-top: -5em;
+        max-width: 75%;
+    }
+
+    .bannerimg {
+        background-image: url(../img/o-stack-of-books-facebook.jpg);
+        background-size: cover;
+        background-position: 0% 50%;
+        height: 20em;
+        width: 100%;
     }
 
     h1 {
+        font-size: 1.5em;
+        text-align: center;
+        margin: auto;
+    }
+
+    div.popupcontent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    div.popup {
+        background-color: rgba(12, 12, 12, 0.63);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 9;
+    }
+
+    textarea {
         font-size: 1em;
+        font-family: Calibri;
+    }
+
+    button {
+        transition: all .3s ease-out;
+        background-color: #005ca0;
+        color: white;
+        border: none;
+        font-size: 1em;
+        width: 5em;
+        height: 2em;
+        margin-top: .5em;
+    }
+
+    button:hover {
+        transform: translate(0px, -5px);
+    }
+
+    div.hide {
+        display: none;
+    }
+
+    div h1 {
+        display: block;
+    }
+
+    div {
+        display: flex;
+    }
+
+    .filtersort {
+        background-color: rgba(0, 48, 130, .8);
+        width: 20%;
+        min-width: 10em;
+        margin: auto;
+        margin-top: 1em;
+        text-align: center;
+        box-shadow: 0 2px 0 0 rgba(7, 7, 33, .15);
+        padding: 1em;
     }
 
     h3 {
@@ -54,7 +205,8 @@
     }
 
     h4 {
-        margin: 0 0 .5em 0;
+        margin: 0 0 0.5em 0;
+        color: white;
     }
 
     select {
@@ -66,7 +218,6 @@
 
     p {
         font-size: .8em;
-        max-width: 30em;
     }
 
     article > footer {
@@ -74,12 +225,86 @@
     }
 
     article {
-        width: auto;
-        height: auto;
         border: 1px solid rgba(150, 150, 150, .3);
         box-shadow: 0 .2em 0 rgba(150, 150, 150, .3);
         padding: 0.3em;
         margin: 0.4em;
-        float: left;
         background-color: white;
+        flex-basis: 15em;
+        transition: all 1s;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
     }
+
+    article:hover {
+        transform: translate(0px, -5px);
+        -webkit-box-shadow: 0px 5px 13px 0px rgba(50, 50, 50, 0.57);
+        -moz-box-shadow: 0px 5px 13px 0px rgba(50, 50, 50, 0.57);
+        box-shadow: 0px 5px 13px 0px rgba(50, 50, 50, 0.57);
+    }
+    /*SWITCH*/
+
+    div.opslaan {
+        display: flex;
+        flex-direction: row;
+        margin-top: auto;
+        width: auto;
+        align-items: baseline;
+    }
+
+    div.opslaan p:nth-child(2) {
+        margin: auto .5em auto auto;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 17px;
+    }
+    /* DEFAULT CHECKBOX HIDE */
+
+    .switch input {
+        display: none;
+    }
+    /* SLIDER */
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 13px;
+        width: 13px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked + .slider {
+        background-color: #003082;
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(13px);
+        -ms-transform: translateX(13px);
+        transform: translateX(13px);
+    }
+    /* EIND SLIDER */

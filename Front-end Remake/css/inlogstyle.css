@@ -23,9 +23,27 @@
             border: 1px solid grey;
             padding: 11px 15px 9px 15px;
             display: block;
-            margin: 1em 0;
+            margin: 1em 0 .5em 0;
             width: 40vw;
             font-size: .8em;
+            box-sizing: border-box;
+        }
+
+        fieldset input:invalid {
+            border: 1px solid red;
+        }
+
+        p.feedback {
+            color: red;
+            border-top: 2px solid red;
+            padding-top: .5em;
+            width: 40vw;
+            display: none;
+            margin-top: .5em;
+        }
+
+        fieldset:invalid p.feedback {
+            display: block;
         }
 
         fieldset {
@@ -43,6 +61,7 @@
         }
 
         button {
+            transition: all .3s ease-out;
             background-color: #005ca0;
             color: white;
             border: none;
@@ -50,6 +69,10 @@
             padding: 1em;
             border-bottom: 1em solid white inset;
             height: 3em;
+        }
+
+        button:hover {
+            transform: translate(0px, -10px);
         }
 
         [type="reset"] {
