@@ -9,9 +9,13 @@
 </head>
 
 <body>
+    <header>
+        <img src="img/Logo_NS.jpg" alt="NSLOGO">
+        <h1>99</h1>
+    </header>
     <section>
-        <h1>Account aanmaken</h1>
-        <form name="myForm" action="homelijst.html">
+        <h1>99-verhalen account aanmaken</h1>
+        <form name="myForm" action="landing.html">
             <fieldset>
                 <legend>Telefoonnummer (optioneel)</legend>
                 <label for="number">Mobiele nummer</label>
@@ -22,16 +26,16 @@
                 <legend>Inloggegevens</legend>
                 <label for="mailone">E-mailadres</label>
                 <input id="mailone" type="email" required="required">
-                <p class="feedback">Dit emailadres wordt niet geaccepteerd.</p>
+                <p class="feedback">Vul een geldig e-mailadres in. (gebruik @)</p>
                 <label for="mailtwo">E-mailadres bevestigen</label>
                 <input id="mailtwo" type="email" required="required">
-                <p class="feedback">Dit emailadres komt niet overeen.</p>
+                <p class="feedback">Vul hetzelfde e-mailadres in.</p>
                 <label for="passone">Wachtwoord</label>
                 <input id="passone" type="password" required="required">
-                <p class="feedback">Uw wachtwoord is niet sterk genoeg.</p>
+                <p class="feedback">Vul een wachtwoord in.</p>
                 <label for="passtwo">Wachtwoord bevestigen</label>
                 <input id="passtwo" type="password" required="required">
-                <p class="feedback">Dit wachtwoord komt niet overeen.</p>
+                <p class="feedback">Vul hetzelfde wachtwoord in.</p>
             </fieldset>
             <input type="checkbox" name="TnC" value="TermsAndConditions">
             <p>Ik ga akkoord met de voorwaarden.</p>
@@ -39,6 +43,7 @@
             <button type="submit">Aanmaken</button>
         </form>
     </section>
+    <script src="js/inlogscript.js"></script>
 </body>
 
 </html>

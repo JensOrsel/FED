@@ -3,7 +3,7 @@
             }
 
             body {
-                font-family: 'Calibri', serif;
+                font-family: 'Calibri', 'Roboto', sans-serif;
                 margin: 0;
             }
 
@@ -97,12 +97,12 @@
             }
 
             button:hover {
-                transform: translate(0px, -5px);
+                transform: translate(0, -0.313em);
             }
 
             #share-buttons img {
-                width: 35px;
-                padding: 5px;
+                width: 2.188em;
+                padding: 0.313em;
                 border: 0;
                 box-shadow: 0;
                 display: inline;
@@ -110,6 +110,10 @@
 
             a {
                 text-decoration: none;
+            }
+
+            .delen {
+                margin: 1em 0;
             }
 
             .reageren {
@@ -128,7 +132,7 @@
                 height: 1em;
             }
 
-            @media only screen and (min-width: 37.5em) {
+            @media only screen and (min-width: 37.5em) and (orientation: landscape) {
                 #verhaal {
                     content: url("../img/Gefrustreerd2.png");
                     height: 100vh;
@@ -139,13 +143,16 @@
                 }
             }
 
-            @media only screen and (min-width: 62.5em) {
+            @media only screen and (min-width: 62.5em) and (orientation: landscape) {
                 #verhaal {
                     content: url("../img/Gefrustreerd3.png");
                 }
                 form {
                     flex-direction: row;
                     flex-wrap: wrap;
+                }
+                .delen {
+                    margin: auto;
                 }
                 .reageren {
                     flex-basis: 40%;
