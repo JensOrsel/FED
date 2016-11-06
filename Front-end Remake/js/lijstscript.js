@@ -5,6 +5,11 @@ var opgeslagen = document.querySelectorAll(".opgeslagen");
 var select = document.querySelector("select");
 var popup = document.querySelector(".popup");
 var buttons = document.querySelector("button");
+var header = document.querySelector(".home");
+
+header.onclick = function () {
+    window.location.href = 'landing.html';
+}
 
 inputs[0].onclick = function inputChecker() {
     "use strict";

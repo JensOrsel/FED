@@ -4,6 +4,12 @@ var inputs = document.querySelectorAll("input");
 var opgeslagen = document.querySelectorAll(".opgeslagen");
 var select = document.querySelector("select");
 var articles = document.querySelectorAll("article");
+var header = document.querySelector(".home");
+
+header.onclick = function () {
+    window.location.href = 'landing.html';
+}
+
 inputs[0].onclick = function inputChecker() {
     "use strict";
     if (inputs[0].checked) {

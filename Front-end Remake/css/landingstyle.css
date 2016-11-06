@@ -232,6 +232,13 @@
             font-size: 1.1em;
         }
 
+        div section img {
+            float: right;
+            width: 5em;
+            height: 5em;
+            margin-right: 1.5em;
+        }
+
         section img {
             margin-top: -1em;
             width: 8em;
@@ -314,7 +321,6 @@
             }
             .hide {
                 display: block;
-                margin-top: 3em;
                 font-size: .8em;
             }
             header {
